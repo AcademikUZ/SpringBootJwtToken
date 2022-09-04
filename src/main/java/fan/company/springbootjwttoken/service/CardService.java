@@ -125,7 +125,7 @@ public class CardService {
 
         if (!existsByUsernameAndNumber) return null;
 
-        List<Income> allByFromCardId = incomeRepository.findAllByFromCardId(card);
+        List<Income> allByFromCardId = incomeRepository.findAllByToCardId (card);
 
         return allByFromCardId;
     }
